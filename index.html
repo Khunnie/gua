@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.eraser.js" ></script>
+		<style>
+			#bg-img{
+				width:616px;
+				height:350px ;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -125px 0 0 -308px;
+				background: url(img/jiang.png) no-repeat;
+			}
+			#bg-img img{
+				position: absolute;
+				left: 110px;
+				top: 181px;
+				width: 395px;
+				height: 75px;
+				cursor: pointer;
+				z-index: 1;
+			}
+			#redux{
+				position: absolute;
+				left: 110px;
+				top: 181px;
+				width: 395px;
+				height: 75px;
+				z-index: 2;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div id="bg-img">
+			<img src="img/yi.jpg" alt="" />
+			<img src="img/gua.png" id="redux" />
+		</div>
+		<script>
+			$(window).load(function  () { //这个适用手机端，等图片加载完再显示，因为有可能会出现第一次加载图片没有加载完就不会出现canvas
+				$('#redux').eraser( {
+					size: 20,   //设置橡皮擦大小
+					completeRatio: .6, //设置擦除面积比例
+				});
+//				
+			})
+		</script>
+	</body>
+</html>
